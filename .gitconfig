@@ -1,0 +1,28 @@
+[user]
+	name = nengberg
+	email = per.niklas.engberg@gmail.com
+[merge]
+	tool = tortoisemerge
+[mergetool "tortoisemerge"]
+	path = C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe
+[mergetool "vscode"]
+	cmd = code --wait --diff $REMOTE $LOCAL $BASE $MERGED
+[diff]
+	guitool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "tortoisemerge"]
+	path = C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe
+[core]
+	editor = code --wait
+	autocrlf = true
+[credential]
+	helper = wincred
+[push]
+	default = simple
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	back = checkout @{-1}
